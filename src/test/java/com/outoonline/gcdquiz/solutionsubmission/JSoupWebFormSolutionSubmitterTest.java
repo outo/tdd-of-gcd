@@ -86,7 +86,7 @@ public class JSoupWebFormSolutionSubmitterTest {
 
     @Test
     public void shouldIndicateProblemDuringSubmission() throws Exception {
-        webFormSolutionSubmitter = new JSoupWebFormSolutionSubmitter("http://non-existent");
+        webFormSolutionSubmitter = new JSoupWebFormSolutionSubmitter("http://localhost/non-existent-url");
         expectedException.expect(UnableToSubmitSolutionException.class);
         webFormSolutionSubmitter.submitSolution(SOLUTION);
     }

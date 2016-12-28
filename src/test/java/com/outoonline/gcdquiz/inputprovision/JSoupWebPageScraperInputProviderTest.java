@@ -93,7 +93,7 @@ public class JSoupWebPageScraperInputProviderTest {
 
     @Test
     public void shouldIndicateAnErrorIfInputsCannotBeProvided() throws Exception {
-        webPageScraperInputProvider = new JSoupWebPageScraperInputProvider("http://non-existent-url", EXPECTED_QUERIES);
+        webPageScraperInputProvider = new JSoupWebPageScraperInputProvider("http://localhost/non-existent-url", EXPECTED_QUERIES);
         expectedException.expect(UnableToProvideInputsException.class);
         webPageScraperInputProvider.getInputs();
     }
